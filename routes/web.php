@@ -18,6 +18,7 @@ use App\Http\Controllers\UserGaleriController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\UserPengumumanController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -53,6 +54,16 @@ Route::get('/kontak', [KontakController::class, 'create'])->name('kontakuser');
 Route::post('/kontak', [KontakController::class, 'store'])->name('kontakuserr');
 Route::get('/userr/pengumuman', [UserPengumumanController::class, 'index'])->name('userr.pengumuman');
 
+
+Route::get('/menu', [UserController::class, 'daftarMenu'])->name('userr.menu');
+Route::get('/menu/{id}/detail', [UserController::class, 'tampilDetailMenu'])->name('userr.detailMenu');
+Route::post('/keranjang/{menuId}/tambah', [UserController::class, 'tambahKeKeranjang'])->name('userr.tambahKeranjang');
+Route::get('/keranjang', [UserController::class, 'lihatKeranjang'])->name('userr.keranjang');
+Route::delete('/keranjang/{id}/hapus', [UserController::class, 'hapusDariKeranjang'])->name('userr.hapusKeranjang');
+Route::post('/keranjang/proses-pembayaran', [UserController::class, 'prosesPembayaranKeranjang'])->name('userr.prosesPembayaranKeranjang');
+Route::post('/menu/proses-pembayaran', [UserController::class, 'prosesPembayaran'])->name('userr.prosesPembayaran'); // Route untuk card menu
+Route::get('/riwayat-pesanan', [UserController::class, 'lihatRiwayatPesanan'])->name('userr.riwayatPesanan');
+Route::delete('/riwayat-pesanan/{id}/hapus', [UserController::class, 'hapusRiwayatPesanan'])->name('userr.hapusRiwayatPesanan');
 
 
 Route::get('/userr.jadwal', function () {

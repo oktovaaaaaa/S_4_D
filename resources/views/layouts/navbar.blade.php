@@ -30,6 +30,11 @@
                 <li class="{{ request()->is('pengumuman') ? 'active' : '' }}">
                     <a href="{{ route('userr.pengumuman') }}">Pengumuman</a>
                 </li>
+                <li class="{{ request()->is('keranjang') ? 'active' : '' }}">
+                    <a href="{{ route('userr.keranjang') }}">Keranjang</a>
+                </li><li class="{{ request()->is('riwayat') ? 'active' : '' }}">
+                    <a href="{{ route('userr.riwayatPesanan') }}">Riwayat</a>
+                </li>
                 <li class="{{ request()->is('kontak') ? 'active' : '' }}">
                     <a href="{{ route('kontakuserr') }}">Kontak</a>
                 </li>

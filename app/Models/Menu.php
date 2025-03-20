@@ -23,4 +23,5 @@ class Menu extends Model
     {
         return number_format($value, 0, ',', '.');
     }
+    
 }

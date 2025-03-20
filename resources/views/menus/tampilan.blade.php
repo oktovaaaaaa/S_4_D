@@ -173,7 +173,7 @@
                         <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
                             <!-- Gambar dengan aspect ratio 1:1 -->
                             <div class="ratio ratio-1x1">
-                                <img src="{{ url('storage/' . $menu->foto) }}" class="card-img-top img-fluid rounded-top-4"
+                                <img src="{{ url('storage/images/' . $menu->foto) }}" class="card-img-top img-fluid rounded-top-4"
                                     alt="Menu Image" style="object-fit: cover;">
                             </div>
                             <div class="card-body d-flex flex-column">
